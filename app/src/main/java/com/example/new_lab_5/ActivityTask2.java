@@ -43,6 +43,7 @@ public class ActivityTask2 extends AppCompatActivity {
     private BottomSheetBehavior bottomSheetBehavior;
     private PopupWindow popupWindow;
     private View popupView;
+    private int score;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -125,6 +126,25 @@ public class ActivityTask2 extends AppCompatActivity {
             text.setText(button5.getText());
         });
 
+        TextView scoreTextView = findViewById(R.id.scoreTextView);
+
+        Button addButton = findViewById(R.id.addButton);
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                score++;
+                scoreTextView.setText(String.valueOf(score));
+            }
+        });
+
+        Button resetButton = findViewById(R.id.resetButton);
+        resetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                score = 0;
+                scoreTextView.setText(String.valueOf(score));
+            }
+        });
 
     }
 

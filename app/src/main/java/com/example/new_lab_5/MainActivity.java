@@ -178,10 +178,12 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        Button webBtn = findViewById(R.id.webBtn);
 
-        WebView browser = findViewById(R.id.webBrowser);
-        browser.getSettings().setJavaScriptEnabled(true);
-        browser.loadUrl("https://wowcircle.net");
+        webBtn.setOnClickListener(v -> {
+            startActivity(new Intent(this, WebActivity.class));
+        });
+
     }
     private void updateStack() {
         textViewStack.setText("Глубина стека: " + stack.size());
