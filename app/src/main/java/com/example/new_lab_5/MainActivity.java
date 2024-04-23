@@ -184,6 +184,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this, WebActivity.class));
         });
 
+        Button swipeBtn = findViewById(R.id.button6);
+        swipeBtn.setOnClickListener(v -> {
+            startActivity(new Intent(this, SwipeAct.class));
+        });
+
     }
     private void updateStack() {
         textViewStack.setText("Глубина стека: " + stack.size());

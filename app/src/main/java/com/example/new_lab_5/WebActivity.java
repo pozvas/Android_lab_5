@@ -19,6 +19,6 @@ public class WebActivity extends AppCompatActivity {
         setContentView(R.layout.activity_web);
         WebView browser = findViewById(R.id.webBrowser);
         browser.getSettings().setJavaScriptEnabled(true);
-        browser.loadUrl("https://wowcircle.net");
+        browser.loadUrl("https://github.com");
     }
 }
